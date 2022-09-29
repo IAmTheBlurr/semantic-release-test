@@ -1,6 +1,6 @@
 ---
 branch: master
-preset: "angular"
+preset: "conventionalcommits"
 tagFormat: "${version}"
 plugins:
   - "@semantic-release/commit-analyzer"
@@ -40,7 +40,7 @@ generateNotes:
     # Tracked bug fix with a hotfix branch
     - type: "hotfix"
     - section: "Bug Fixes"
-    # Uninmportent fix (CI testing, etc)
+    # Unimportant fix (CI testing, etc)
     - type: "fix"
     - hidden: true
     - type: "chore"
