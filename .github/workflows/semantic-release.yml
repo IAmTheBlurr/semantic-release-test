@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Deploy-to-FragDrake:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - uses: codfish/semantic-release-action@v2
+        with:
+          # specify default branches to add support for the `main` branch
+          # which semantic-release doesn't have as a default yet.
+          branches: |
+            ['main']
+        env:
+          GITHUB_TOKEN: ${{ secrets.USER_TOKEN }}
